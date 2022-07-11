@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.25
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForretasAPITester", "ForretasAPITester\ForretasAPITester.csproj", "{296EC8EB-228C-4AAD-A0E5-C549FFE4301D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{296EC8EB-228C-4AAD-A0E5-C549FFE4301D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{296EC8EB-228C-4AAD-A0E5-C549FFE4301D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{296EC8EB-228C-4AAD-A0E5-C549FFE4301D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{296EC8EB-228C-4AAD-A0E5-C549FFE4301D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E23A202-4BDF-43FB-A923-2F7B7749177A}
+	EndGlobalSection
+EndGlobal
