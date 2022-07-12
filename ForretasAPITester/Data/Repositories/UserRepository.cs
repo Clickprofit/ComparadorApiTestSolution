@@ -13,9 +13,12 @@ namespace ForretasAPITester.Data.Repositories
 
         public Merchant GetUser(LoginData loginData)
         {
-            string hashedPassword = (new SecurityHelper()).EncryptText(loginData.Password);
+            ///Inativado funcao de encriptar palavra passe, pois nao estamos a utilizar nenhuma encriptacao
+            ///na bd
+            //string hashedPassword = (new SecurityHelper()).EncryptText(loginData.Password);
             string query = $"SELECT TOP 1 * FROM Merchant WHERE Utilizador = '{loginData.Username}' " +
-                $"AND PalavraPasse = '{hashedPassword}'";
+                $"AND PalavraPasse = '{loginData.Password}'";
+            //$"AND PalavraPasse = '{hashedPassword}'";
 
             return GetSingleMappedEntity(query, null);
         }
