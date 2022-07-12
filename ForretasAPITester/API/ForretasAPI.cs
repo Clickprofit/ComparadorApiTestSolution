@@ -75,6 +75,7 @@ namespace ForretasAPITester.API
                 //    response = client.PutAsync(endpoint, contentData).Result;
                 //}
 
+
                 response = client.PostAsync(endpoint, contentData).Result;
 
                 string jsonResponse = response.Content.ReadAsStringAsync().Result;
