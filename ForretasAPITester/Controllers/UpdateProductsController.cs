@@ -48,7 +48,7 @@ namespace ForretasAPITester.Controllers
             bool authenticated = api.Authenticate(apiLogin, apiPassword, out string jwt);
 
             string endpoint = "/api/products/inactivate";
-            endpoint = $"{Configuration.GetSection("API")?.GetSection("BaseURL").Value}/api/products/inactivate";
+            //endpoint = $"{Configuration.GetSection("API")?.GetSection("BaseURL").Value}/api/products/inactivate";
 
             string response = api.GenericSend(endpoint, eans, HttpMethod.Post, jwt);
 
