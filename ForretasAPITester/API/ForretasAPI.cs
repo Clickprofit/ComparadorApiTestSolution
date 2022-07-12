@@ -66,14 +66,16 @@ namespace ForretasAPITester.API
 
                 var contentData = new StringContent(stringData, System.Text.Encoding.UTF8, "application/json");
 
-                if (method == HttpMethod.Post)
-                {
-                    response = client.PostAsync(endpoint, contentData).Result;
-                }
-                else
-                {
-                    response = client.PutAsync(endpoint, contentData).Result;
-                }
+                //if (method == HttpMethod.Post)
+                //{
+                //    response = client.PostAsync(endpoint, contentData).Result;
+                //}
+                //else
+                //{
+                //    response = client.PutAsync(endpoint, contentData).Result;
+                //}
+
+                response = client.PostAsync(endpoint, contentData).Result;
 
                 string jsonResponse = response.Content.ReadAsStringAsync().Result;
 
