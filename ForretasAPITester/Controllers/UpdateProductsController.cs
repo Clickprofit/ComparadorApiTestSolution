@@ -69,7 +69,7 @@ namespace ForretasAPITester.Controllers
             bool authenticated = api.Authenticate(apiLogin, apiPassword, out string jwt);
 
             string endpoint = "/api/products/update_by_ean";
-            //endpoint = $"{Configuration.GetSection("API")?.GetSection("BaseURL").Value}/api/products/update_by_ean";
+             //endpoint = $"{Configuration.GetSection("API")?.GetSection("BaseURL").Value}/api/products/update_by_ean";
 
             string response = api.GenericSend(endpoint, productsToUpdate, HttpMethod.Post, jwt);
 
