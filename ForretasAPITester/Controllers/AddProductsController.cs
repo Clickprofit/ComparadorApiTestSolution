@@ -49,7 +49,7 @@ namespace ForretasAPITester.Controllers
             string endpoint = "/api/products/add_by_ean";
             //endpoint = $"{Configuration.GetSection("API")?.GetSection("BaseURL").Value}/api/products/add_by_ean";
 
-            string response = api.GenericSend(endpoint, productsToAdd, HttpMethod.Put, jwt);
+            string response = api.GenericSend(endpoint, productsToAdd, HttpMethod.Post, jwt);
 
             data.APIResponse = response;
 

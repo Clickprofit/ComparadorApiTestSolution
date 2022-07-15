@@ -33,7 +33,6 @@
     <Folder Include="Data\Repositories\" />
     <Folder Include="Data\Repositories\Abstract\" />
     <Folder Include="Helpers\" />
-    <Folder Include="Views\AddProducts\" />
     <Folder Include="API\" />
     <Folder Include="Views\UpdateProducts\" />
   </ItemGroup>

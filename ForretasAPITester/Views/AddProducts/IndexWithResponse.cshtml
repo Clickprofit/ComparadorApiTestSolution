@@ -1,0 +1,36 @@
+﻿@model ForretasAPITester.Models.AddProductsData
+
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+
+    @{
+    ViewBag.Title = "Test adding products throough API";
+}
+
+
+<div class="container" style="padding-bottom:25px">
+    <h4>Test adding products with API</h4>
+    <div style="width: 70%; float:left; border:solid 1px black">
+
+
+        <hr />
+
+        @if (!string.IsNullOrEmpty(Model.APIResponse))
+        {
+            <table width="95%" align="center" style="margin-bottom:15px;">
+                <tr>
+                    <td>Resposta da API</td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea cols="80" rows="20">
+                            @Model.APIResponse.Trim()
+                                </textarea>
+                    </td>
+                </tr>
+            </table>
+        }
+
+    </div>
+</div>
