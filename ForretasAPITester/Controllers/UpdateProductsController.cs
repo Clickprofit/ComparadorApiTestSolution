@@ -50,7 +50,7 @@ namespace ForretasAPITester.Controllers
             string endpoint = "/api/products/inactivate";
             //endpoint = $"{Configuration.GetSection("API")?.GetSection("BaseURL").Value}/api/products/inactivate";
 
-            string response = api.GenericSend(endpoint, eans, HttpMethod.Post, jwt);
+            string response = api.GenericPost(endpoint, eans, jwt);
 
             data.APIResponse = response;
 
@@ -71,7 +71,7 @@ namespace ForretasAPITester.Controllers
             string endpoint = "/api/products/update_by_ean";
              //endpoint = $"{Configuration.GetSection("API")?.GetSection("BaseURL").Value}/api/products/update_by_ean";
 
-            string response = api.GenericSend(endpoint, productsToUpdate, HttpMethod.Post, jwt);
+            string response = api.GenericPost(endpoint, productsToUpdate, jwt);
 
             data.APIResponse = response;
 
