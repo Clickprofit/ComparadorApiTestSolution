@@ -1,0 +1,54 @@
+﻿@model ForretasAPITester.Models.ProductInfoData
+
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+
+@{
+    ViewBag.Title = "Test getting product info";
+}
+
+<br />
+
+<div class="container" style="padding-bottom:25px">
+    <h4>Test getting product info with API</h4>
+    <div style="width: 70%; float:left; border:solid 1px black">
+
+        <form asp-action="SendGetProductRequest" method="post" enctype="multipart/form-data">
+            <table width="95%" align="center" style="margin-bottom:15px;">
+                <tr>
+                    <td width="40%">
+                        <label>Product Id:</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" style="width:100%" asp-for="ProductId" />
+                        <span style="font-size:10px; color:red" asp-validation-for="ProductId"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" class="btn btn-info" asp-action="SendGetProductRequest">Obter info do produto</button>
+                    </td>
+                </tr>
+            </table>
+            <hr />
+
+            @if (!string.IsNullOrEmpty(Model.APIResponse))
+            {
+                <table width="95%" align="center" style="margin-bottom:15px;">
+                    <tr>
+                        <td>Resposta da API</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea cols="80" rows="20">
+                                @Model.APIResponse
+                            </textarea>
+                        </td>
+                    </tr>
+                </table>
+            }
+        </form>
+    </div>
+</div>

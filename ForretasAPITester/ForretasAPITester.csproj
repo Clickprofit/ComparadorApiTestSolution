@@ -27,6 +27,7 @@
     <None Remove="Views\UpdateProducts\" />
     <None Remove="Views\Search\" />
     <None Remove="Views\ListProducts\" />
+    <None Remove="Views\ProductInfo\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Account\" />
@@ -39,5 +40,6 @@
     <Folder Include="Views\UpdateProducts\" />
     <Folder Include="Views\Search\" />
     <Folder Include="Views\ListProducts\" />
+    <Folder Include="Views\ProductInfo\" />
   </ItemGroup>
 </Project>

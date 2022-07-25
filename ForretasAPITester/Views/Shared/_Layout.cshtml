@@ -32,7 +32,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="ListProducts" asp-action="Index" style="font-size:12px;">List</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Search" asp-action="Index" style="font-size:12px;">Product info</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ProductInfo" asp-action="Index" style="font-size:12px;">Product info</a>
                         </li>
                         @if (User != null && User.Claims != null && User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Name) != null)
                         {
