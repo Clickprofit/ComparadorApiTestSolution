@@ -16,16 +16,23 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav flex-grow-1" style="padding-top:7px;">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="AddProducts" asp-action="Index">Test adding products</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="AddProducts" asp-action="Index" style="font-size:12px;">Add</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UpdateProducts" asp-action="Index">Test updating products</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="UpdateProducts" asp-action="Index" style="font-size:12px;">Update</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Search" asp-action="Index">Test searching</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Search" asp-action="Index" style="font-size:12px;">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ListProducts" asp-action="Index" style="font-size:12px;">List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Search" asp-action="Index" style="font-size:12px;">Product info</a>
                         </li>
                         @if (User != null && User.Claims != null && User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Name) != null)
                         {
