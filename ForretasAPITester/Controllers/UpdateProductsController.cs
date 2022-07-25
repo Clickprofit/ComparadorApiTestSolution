@@ -77,5 +77,26 @@ namespace ForretasAPITester.Controllers
 
             return RedirectToAction("IndexWithResponse", data);
         }
+
+        [HttpPost]
+        public IActionResult SendUpdateByIdRequest([FromForm] UpdateProductsData data)
+        {
+            var apiLogin = User.Claims.FirstOrDefault(c => c.Type == "APILogin").Value.ToString();
+            var apiPassword = User.Claims.FirstOrDefault(c => c.Type == "APIPassword").Value.ToString();
+            int merchantId = Convert.ToInt32(User.Claims.FirstOrDefault(c => c.Type == "MerchantId").Value.ToString());
+
+            var productsToUpdate = ProductRepository.GetProductsById(data, merchantId);
+
+            bool authenticated = api.Authenticate(apiLogin, apiPassword, out string jwt);
+
+            string endpoint = "/api/products/update_by_id";
+            //endpoint = $"{Configuration.GetSection("API")?.GetSection("BaseURL").Value}/api/products/update_by_ean";
+
+            string response = api.GenericPost(endpoint, productsToUpdate, jwt);
+
+            data.APIResponse = response;
+
+            return RedirectToAction("IndexWithResponse", data);
+        }
     }
 }
