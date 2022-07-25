@@ -77,6 +77,24 @@ namespace ForretasAPITester.API
             catch (Exception ex) { return ex.Message; }
         }
 
+        public string GenericGet(string endpoint, string query, string jwt)
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                ConfigureHttpClient(client, jwt);
+
+                HttpResponseMessage response;
+
+                string url = string.IsNullOrEmpty(query) ? endpoint : $"{endpoint}?{query}";
+
+                response = client.GetAsync(url).Result;
+
+                return response.Content.ReadAsStringAsync().Result;
+            }
+            catch (Exception ex) { return ex.Message; }
+        }
+
         private void ConfigureHttpClient(HttpClient client, string jwt)
         {
             client.BaseAddress = new Uri(APIBaseUrl);

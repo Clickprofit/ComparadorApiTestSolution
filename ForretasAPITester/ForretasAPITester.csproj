@@ -25,6 +25,7 @@
     <None Remove="API\" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="Views\UpdateProducts\" />
+    <None Remove="Views\Search\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Account\" />
@@ -35,5 +36,6 @@
     <Folder Include="Helpers\" />
     <Folder Include="API\" />
     <Folder Include="Views\UpdateProducts\" />
+    <Folder Include="Views\Search\" />
   </ItemGroup>
 </Project>
